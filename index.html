@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Website</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media-queries.css" />
     <!-- Font Awesome for icons used  -->
-    <script src="https://kit.fontawesome.com/abff2fe7e2.js" crossorigin="anonymous"></script>
+    
 </head>
 
 <body>
@@ -29,7 +30,7 @@
                 <img src="./assets/asset 1.png" alt="Company logo" />
             </a>
             <div class="nav-links">
-                <ul class="nav-ul flex">
+                <ul class="nav-ul flex" id="nav-links">
                     <li><a href="#" class="hover-link">Products</a></li>
                     <li><a href="#" class="hover-link">Customers</a></li>
                     <li><a href="#" class="hover-link">Pricing</a></li>
@@ -38,6 +39,11 @@
                     <li><a href="#" class="hover-link primary-button">Sign up</a></li>
                 </ul>
             </div>
+            <a href="#" id="menu-toggle" class="nav-toggle hover-link">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 30 30">
+                    <path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"></path>
+                    </svg>
+            </a>
         </div>
     </section>
 
@@ -140,7 +146,7 @@
                 </p>
             </div>
         </div>
-        <div class="container flex big-feature-section " style="flex-direction: row-reverse;">
+        <div class="container flex big-feature-section" id="big-feature-section-exception">
             <div class="big-feature-left">
                 <img src="./assets/asset 21.png" alt="" />
             </div>
@@ -245,5 +251,14 @@
                 <a class="hover-link" href="#"><i class="fa-brands fa-twitter"></i></a>
             </div>
         </div>
+    <script src="https://kit.fontawesome.com/abff2fe7e2.js" crossorigin="anonymous"></script>
+    <script>
+        const toggleButton = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        toggleButton.addEventListener("click", () => {
+            navLinks.classList.toggle("active")
+        })
+    </script>
 </body>
 </html>
